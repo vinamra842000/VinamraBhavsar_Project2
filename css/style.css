@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: lightyellow;
+}
+
+#outer_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav_bar{
+    background-color: rgb(0, 0, 0, 0.85);
+    text-align: center;
+    width: 100%;
+}
+
+#nav_ul li{
+    display: inline;
+    margin: 0px 25px;
+    font-size: 1.3em;
+}
+
+#nav_ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#header{
+    width: 100%;
+    line-height: 800%;
+    background : linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
+     rgba(0, 0, 0, 0.3) 59%, rgba(0, 0, 0, 0.85) 100%),
+    url("/media/background.jpg") no-repeat;
+    background-size: 100% 800px;
+    background-position: bottom;
+    text-align: center;
+}
+
+#header h1 a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgb(187, 160, 101);
+}
+
+#main{
+    padding: 2%;
+}
+
+#main_div_1, #main_div_2, #main_div_3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#div_2_section, #div_3_section{
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
