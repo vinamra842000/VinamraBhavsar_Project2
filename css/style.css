@@ -1,4 +1,5 @@
-body{
+/* Style Reset */
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,70 +8,241 @@ body{
     background-color: lightyellow;
 }
 
-#outer_div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+a{
+    text-decoration: none;
+    font-size: 1.2em
 }
 
-#nav_bar{
+/* nav style */
+#nav_bar {
     background-color: rgb(0, 0, 0, 0.85);
     text-align: center;
     width: 100%;
 }
 
-#nav_ul li{
+#nav_ul li {
     display: inline;
     margin: 0px 25px;
     font-size: 1.3em;
 }
 
-#nav_ul li a{
+#nav_ul li a {
     font-weight: bold;
-    text-decoration: none;
     color: white;
 }
 
-#header{
+/* header style */
+
+#header {
     width: 100%;
     line-height: 800%;
-    background : linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
-     rgba(0, 0, 0, 0.3) 59%, rgba(0, 0, 0, 0.85) 100%),
-    url("/media/background.jpg") no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.3) 59%, rgba(0, 0, 0, 0.85) 100%),
+        url("/media/background.jpg") no-repeat;
     background-size: 100% 800px;
     background-position: bottom;
     text-align: center;
 }
 
-#header h1 a{
+#header h1 a {
     font-weight: bold;
-    text-decoration: none;
     font-size: 1.5em;
     color: rgb(187, 160, 101);
 }
 
-#main{
-    padding: 2%;
+/* footer style */
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(0, 0, 0, 0.85);
+    width: 100%;
+    text-align: center;
+    line-height: 200%;
 }
 
-#main_div_1, #main_div_2, #main_div_3{
+#footer_nav_ul {
+    list-style-type: none;
+}
+
+#footer_nav_ul li {
+    margin: 0px 25px;
+}
+
+#footer_nav_ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer_div {
+    color: white;
+}
+
+/* index style start */
+
+#main h2 {
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+}
+
+#outer_div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#main {
+    padding: 2%;
+}
 
-#div_2_section, #div_3_section{
+#main_div_1,
+#main_div_2,
+#main_div_3 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+
+#div_2_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1%;
 }
 
-section{
+section p {
+    padding: 2%;
+}
+
+#div_3_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     border: 2px solid black;
     border-radius: 20px;
+}
+
+/* index style end */
+
+
+/* book detail style start */
+
+#book-main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 3%;
+}
+
+#book-main-left{
+    position: sticky;
+    top: 0;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#book-main-left a{
+    color: rgb(55, 34, 19);
+    text-decoration: underline;
+    margin-left: 3%;
+    margin-top: 3%;
+    height: 20px;
+    width: 50%;
+}
+
+#genre{
+    color: rgb(55, 34, 19);
+    font-weight: 600;
+}
+
+.genre-list{
+    font-weight: 500;
+    text-decoration: 2px underline green;
+}
+
+.review-user-detail{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.user{
+    font-weight: 550;
+}
+
+.star{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* book detail style end */
+
+@media all and (max-width: 768px) {
+
+    /* nav style */
+
+    #nav_ul li {
+        display: block;
+        margin: 25px 0;
+    }
+
+    /* header style */
+
+    #header {
+        line-height: 800%;
+    }
+
+    #header h1 a {
+        font-size: 1em;
+    }
+
+    /* index style start */
+
+    section {
+        width: 80%;
+        margin-bottom: 5%;
+    }
+
+    #div_2_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    #div_3_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    /* index style end */
+
+    /* book detail style start */
+    #book-main{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    #book-main-left{
+        position: relative;
+        display: grid;
+        justify-content: center;
+        height: 300px;
+    }
+
+    #book-main-left a{
+        width: 100%;
+    }
+    /* book detail style end */
+
 }
