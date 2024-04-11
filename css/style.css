@@ -13,6 +13,10 @@ a{
     font-size: 1.2em
 }
 
+.bookimg{
+    border-radius: 0 10px 10px 0;
+}
+
 /* nav style */
 #nav_bar {
     background-color: rgb(0, 0, 0, 0.85);
@@ -157,7 +161,7 @@ section {
     margin-left: 3%;
     margin-top: 3%;
     height: 20px;
-    width: 50%;
+    width: 70%;
 }
 
 #genre{
