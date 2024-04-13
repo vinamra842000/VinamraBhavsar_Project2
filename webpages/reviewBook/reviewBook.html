@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Map Of The Otherlands</title>
+    <title>Rating Of Book</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="#">Books</a></li>
                 <li><a href="#">Genre</a></li>
-                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
             </ul>
         </nav>
         <header id="header">
@@ -23,7 +23,90 @@
         </header>
 
         <main id="review-main">
-            
+            <div id="review-form-box">
+                <h1 id="rate-book-h1">
+                    Rate This Book
+                </h1>
+                <form action="" id="review-form">
+                    <fieldset>
+                        <legend>
+                            Review Form
+                        </legend>
+                        <label for="first_name">First Name</label><br>
+                        <input type="text" id="first_name" placeholder="Enter Your First Name"><br><br>
+
+                        <label for="last_name">Last Name</label><br>
+                        <input type="text" id="last_name" placeholder="Enter Your Last Name"><br><br>
+
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" placeholder="example@company.com"><br><br>
+
+                        <label for="review">Review</label><br>
+                        <textarea id="review" cols="35" rows="3" placeholder="Write review under 300 words"></textarea><br><br>
+
+                        <label for="start">Star</label><br>
+                        <select id="star">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br>
+                        <br>
+                        <button type="button" id="review-button">
+                            Submit Your Review
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="review-list-box">
+                <h1 id="review-list-box-h1">
+                    Review List
+                </h1>
+                <div class="review-user-detail">
+                    <div class="user">
+                        <img src="../../media/user.png" alt="user" height="50px" width="50px">
+                        <p>Vinamra Bhavsar</p>
+                    </div>
+                    <div class="review">
+                        <p class="star"> ★ ★ </p>
+                        <p>the plot twists weren't twistin.</p>
+                        
+                    </div>
+                </div>
+                <hr>
+                <div class="review-user-detail">
+                    <div class="user">
+                        <img src="../../media/user.png" alt="user" height="50px" width="50px">
+                        <p>Het Shah</p>
+                    </div>
+                    <div class="review">
+                        <p class="star"> ★ ★ ★ ★ </p>
+                        <p>Another heart-throbbing, twisty whodunnit murder mystery meets a delicious psychological
+                            thriller concept from Kate Alice Marshall. The story lures you into the complex lives of
+                            three sisters whose world changed forever after the tragic night they found their
+                            parents brutally killed. In order to survive the incident, they formed a lie and hid the
+                            ugly truth.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="review-user-detail">
+                    <div class="user">
+                        <img src="../../media/user.png" alt="user" height="50px" width="50px">
+                        <p>User Name</p>
+                    </div>
+                    <div class="review">
+                        <p class="star"> ★ ★ ★ </p>
+                        <p>Emma and her husband start having financial difficulties. They move back into the mansion
+                            her parents were murdered in when she was a teenager. Trouble arises because people
+                            think she was the one that killed her parents.
+                            This book had many twists and turns and was an excellent read. I'd like to thank
+                            NetGalley and Flatiron Books for the chance to read this ARC!</p>
+                    </div>
+                </div>
+            </div>            
         </main>
 
         <footer id="footer">
@@ -32,7 +115,7 @@
                     <li><a href="../../index.html">Home</a></li>
                     <li><a href="#">Books</a></li>
                     <li><a href="#">Genre</a></li>
-                    <li><a href="./aboutUs.html">About Us</a></li>
+                    <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
                 </ul>
             </nav>
             <div id="footer_div">
