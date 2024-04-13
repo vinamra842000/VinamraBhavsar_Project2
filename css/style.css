@@ -215,6 +215,24 @@ dt{
     text-align: center;
 }
 
+#user-site-review{
+    border: 4px solid rgb(55, 34, 19);
+    border-radius: 15px;
+    padding: 1% 1% 0 1%;
+}
+
+#user-site-review h2{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.bx-wrapper .bx-viewport{
+    background-color: lightyellow;
+    border: 4px solid rgb(55, 34, 19);
+    border-radius: 25px;
+}
+
 /* about us style end */
 
 /* review book style start */
