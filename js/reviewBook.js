@@ -80,7 +80,7 @@ function addReviewToList(name, star, review) {
     var html = `<hr>
                 <div class="review-user-detail">
                     <div class="user">
-                        <img src="../../media/user.png" alt="user" height="50px" width="50px">
+                        <img src="../../media/UserImages/user.png" alt="user" height="50px" width="50px">
                         <p>${name}</p>
                     </div>
                     <div class="review">

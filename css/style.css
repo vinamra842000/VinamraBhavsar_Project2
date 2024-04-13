@@ -334,6 +334,34 @@ fieldset{
 
 /* book list style end */
 
+/* Genre book shelf style start */
+
+#genre-main{
+    padding: 2%;
+}
+
+#magic-genre-box h1, #mystery-genre-box h1, #romace-genre-box h1, #scifi-genre-box h1{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+}
+
+#book-shelf{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 1%;
+}
+
+#shelf{
+    border-bottom: 10px solid transparent;
+    border-image: linear-gradient(to right, rgb(27,18,17), rgb(97,47,42) );
+    border-image-slice: 1;
+    padding: 0 5% 0 5%;
+}
+
+/* Genre book shelf style end */
 
 @media all and (max-width: 768px) {
 
@@ -409,4 +437,16 @@ fieldset{
         text-align: center;
     }
     /* review book style end */
+
+    /* Genre book shelf style start */
+
+    #book-shelf{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #book-shelf img{
+        padding-top: 10%;
+    }
+
+    /* Genre book shelf style end */
 }
