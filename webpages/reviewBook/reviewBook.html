@@ -33,18 +33,18 @@
                             Review Form
                         </legend>
                         <label for="first_name">First Name</label><br>
-                        <input type="text" id="first_name" placeholder="Enter Your First Name"><br><br>
+                        <input type="text" id="first_name" placeholder="Enter Your First Name" maxlength="25"><br><br>
 
                         <label for="last_name">Last Name</label><br>
-                        <input type="text" id="last_name" placeholder="Enter Your Last Name"><br><br>
+                        <input type="text" id="last_name" placeholder="Enter Your Last Name" maxlength="25"><br><br>
 
                         <label for="email">Email</label><br>
-                        <input type="email" id="email" placeholder="example@company.com"><br><br>
+                        <input type="email" id="email" placeholder="example@company.com" maxlength="70"><br><br>
 
                         <label for="review">Review</label><br>
                         <textarea id="review" cols="35" rows="3" placeholder="Write review under 300 words"></textarea><br><br>
 
-                        <label for="start">Star</label><br>
+                        <label>Star</label><br>
                         <select id="star">
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -125,6 +125,7 @@
             </div>
         </footer>
     </div>
+    <script src="../../js/reviewBook.js"></script>
 </body>
 
 </html>

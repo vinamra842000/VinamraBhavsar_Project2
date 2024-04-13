@@ -401,4 +401,12 @@ fieldset{
         text-align: center;
     }
     /* book list style end */
+
+    /* review book style start */
+    .review-user-detail{
+        width: 100%;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    /* review book style end */
 }
