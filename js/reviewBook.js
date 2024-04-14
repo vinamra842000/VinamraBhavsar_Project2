@@ -1,6 +1,8 @@
 const $ = (selector) => document.querySelector(selector);
 var nameRegex = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var isFirstComment = true;
+var emailList = [];
 
 function clearData() {
     $("#first_name").value = "";
@@ -35,6 +37,10 @@ function processData() {
         alert("Email: Invalid Entry.");
         return;
     }
+    else if(emailList.includes($("#email").value)){
+        alert("Email: Can not give multiple review with same email.");
+        return;
+    }
     else if ($("#review").value == undefined || $("#review").value == null || $("#review").value == '') {
         alert("Review: Can not be blank.");
         return;
@@ -44,12 +50,12 @@ function processData() {
         return;
     }
     else{
-        addReviewToList($("#first_name").value + " " + $("#last_name").value, $("#star").value, $("#review").value);
+        addReviewToList($("#first_name").value + " " + $("#last_name").value, $("#star").value, $("#review").value, $("#email").value);
     }
 
 }
 
-function addReviewToList(name, star, review) {
+function addReviewToList(name, star, review, email) {
 
     var starHtml = "";
     switch (parseInt(star)) {
@@ -76,8 +82,9 @@ function addReviewToList(name, star, review) {
             break;
     }
 
+    $("#review-list-box-h1").style.display = "block";
 
-    var html = `<hr>
+    var html = `${isFirstComment ? '' : '<hr>'}
                 <div class="review-user-detail">
                     <div class="user">
                         <img src="../../media/UserImages/user.png" alt="user" height="50px" width="50px">
@@ -98,8 +105,11 @@ function addReviewToList(name, star, review) {
         parenDiv.appendChild(tempElement.firstChild);
     }
 
+    emailList.push(email)
+
     clearData();
     changeButtonHtml();
+    isFirstComment = false;
 }
 
 
@@ -114,5 +124,6 @@ function countWordsOfReview(review) {
 document.addEventListener("DOMContentLoaded", () => {
     $("#first_name").focus();
     $("#first_name").select();
+    $("#review-list-box-h1").style.display = "none";
     $("#review-button").addEventListener("click", processData);
 });

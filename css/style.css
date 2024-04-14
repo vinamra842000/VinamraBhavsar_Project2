@@ -1,19 +1,108 @@
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika+Negative:wght@300..700&display=swap');
+
+/* Variable For Common Use  */
+:root {
+    --THEME_BACKGROUND: lightyellow;
+    --NAV_FOOTER_BACKGROUND: rgb(0, 0, 0, 0.85);
+    --WHITE: white;
+    --HEADER_H1: rgb(187, 160, 101);
+    --HEADER_H1_LIGHT: rgb(231, 203, 145);
+    --TEXT_BROWN: rgb(55, 34, 19);
+    --BORDER_BROWN: rgb(55, 34, 19);
+    --BUTTON: rgb(30, 25, 21);
+    --BUTTON_HOVER: rgb(30, 25, 21, 0.9);
+    --BUTTON_TEXT: rgb(248, 255, 255);
+    --ANCHOR_HOVER: rgb(116, 65, 18);
+}
+
+/* Variable End */
+
+/* Font Style Start */
+
+#header {
+    font-family: "Kalam", cursive;
+}
+
+#nav_bar, #footer {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+#footer_div{
+    font-family: "Dancing Script", sans-serif;
+}
+
+.title{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.sub-title{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.sub-title-writer{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    font-size: 1.7em;
+}
+
+.sub-title-book-list{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.rate-book{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Font Style End */
+
+/* Common Class Start */
+
+.title {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sub-title {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sub-title-writer{
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Common Class End  */
+
 /* Style Reset And Common Style*/
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: 16px;
-    background-color: lightyellow;
+    background-color: var(--THEME_BACKGROUND);
 }
 
-a{
+a {
     text-decoration: none;
     font-size: 1.2em
 }
 
-.bookimg{
+.bookimg {
     border-radius: 0 10px 10px 0;
 }
 
@@ -25,7 +114,7 @@ a{
 
 /* nav style */
 #nav_bar {
-    background-color: rgb(0, 0, 0, 0.85);
+    background-color: var(--NAV_FOOTER_BACKGROUND);
     text-align: center;
     width: 100%;
 }
@@ -37,8 +126,13 @@ a{
 }
 
 #nav_ul li a {
-    font-weight: bold;
-    color: white;
+    text-decoration: underline var(--WHITE);
+    color: var(--WHITE);
+}
+
+#nav_ul li a:hover {
+    color: var(--HEADER_H1_LIGHT);
+    text-decoration: underline var(--HEADER_H1_LIGHT);
 }
 
 /* header style */
@@ -54,10 +148,18 @@ a{
     text-align: center;
 }
 
+#header h1 {
+    font-size: 3.2em;
+}
+
 #header h1 a {
     font-weight: bold;
     font-size: 1.5em;
-    color: rgb(187, 160, 101);
+    color: var(--HEADER_H1);
+}
+
+#header h1 a:hover {
+    text-shadow: 1px 1px 3px var(--WHITE);
 }
 
 /* footer style */
@@ -65,7 +167,7 @@ a{
 #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: rgb(0, 0, 0, 0.85);
+    background-color: var(--NAV_FOOTER_BACKGROUND);
     width: 100%;
     text-align: center;
     line-height: 200%;
@@ -81,23 +183,29 @@ a{
 
 #footer_nav_ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--WHITE);
+}
+
+#footer_nav_ul li a:hover {
+    color: var(--HEADER_H1_LIGHT);
+    text-decoration: underline var(--HEADER_H1_LIGHT);
 }
 
 #footer_div {
-    color: white;
+    color: var(--WHITE);
+    font-weight: bolder;
+    font-size: 1.5em;
 }
 
 /* index style start */
 
-#main h2 {
-    width: 100%;
-    font-size: 2em;
-    text-align: center;
-}
-
 #main {
     padding: 2%;
+}
+
+#main p {
+    font-size: 1.3em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 #main_div_1,
@@ -109,6 +217,10 @@ a{
     text-align: justify;
 }
 
+
+#main_div_3 {
+    margin-top: 20px;
+}
 
 #div_2_section {
     display: grid;
@@ -131,13 +243,20 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 2px solid black;
-    border-radius: 20px;
+    border: 3px solid var(--BORDER_BROWN);
+    border-radius: 30px;
 }
 
-#div_3_section section a{
+#div_3_section section a {
     height: 60px;
     color: black;
+    width: 100%;
+}
+
+#div_3_section section a:hover {
+    height: 60px;
+    color: var(--ANCHOR_HOVER);
+    width: 100%;
 }
 
 /* index style end */
@@ -145,23 +264,28 @@ section {
 
 /* book detail style start */
 
-#book-main{
+#book-main {
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin: 3%;
 }
 
-#book-main-left{
+#book-main p {
+    font-size: 1.2em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;;
+}
+
+#book-main-left {
     position: sticky;
-    top: 0;
+    top: 150px;
     align-self: start;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-#book-main-left a{
-    color: rgb(55, 34, 19);
+#book-main-left a {
+    color: var(--TEXT_BROWN);
     text-decoration: underline;
     margin-left: 3%;
     margin-top: 3%;
@@ -169,26 +293,26 @@ section {
     width: 70%;
 }
 
-#genre{
-    color: rgb(55, 34, 19);
+#genre {
+    color: var(--TEXT_BROWN);
     font-weight: 600;
 }
 
-.genre-list{
+.genre-list {
     font-weight: 500;
     text-decoration: 2px underline green;
 }
 
-.review-user-detail{
+.review-user-detail {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
-.user{
+.user {
     font-weight: 550;
 }
 
-.star{
+.star {
     font-size: 1.5em;
     margin: 0;
 }
@@ -197,39 +321,51 @@ section {
 
 /* about us style start */
 
-#about-main{
+#about-main {
     padding: 2%;
 }
 
-q{
+#about-main p, #about-main dl {
+    font-size: 1.2em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#about-main q {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 2em;
     font-style: italic;
 }
 
-dt{
+.about-us-subtitle{
+    color: var(--ANCHOR_HOVER);
+    margin-top: 35px;
+}
+
+dt {
     padding: 1%;
     font-weight: bold;
 }
-#quote{
+
+#quote {
     width: 100%;
     text-align: center;
 }
 
-#user-site-review{
-    border: 4px solid rgb(55, 34, 19);
+#user-site-review {
+    border: 4px solid var(--BORDER_BROWN);
     border-radius: 15px;
     padding: 1% 1% 0 1%;
 }
 
-#user-site-review h2{
+#user-site-review h2 {
     width: 100%;
     text-align: center;
     font-size: 2em;
 }
 
-.bx-wrapper .bx-viewport{
-    background-color: lightyellow;
-    border: 4px solid rgb(55, 34, 19);
+.bx-wrapper .bx-viewport {
+    background-color: var(--THEME_BACKGROUND);
+    border: 4px solid var(--BORDER_BROWN);
     border-radius: 25px;
 }
 
@@ -237,98 +373,118 @@ dt{
 
 /* review book style start */
 
-#review-main{
+#review-main {
     display: grid;
     grid-template-columns: 1fr;
     margin: 3%;
     justify-items: center;
 }
 
-#review-form-box{
+#review-main p, #review-main label, #review-main legend, #review-main input,
+#review-main textarea, #review-main select {
+    font-size: 1.3em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#review-form-box {
     width: 60%;
 }
 
-#rate-book-h1{
+#rate-book-h1 {
     width: 100%;
     text-align: center;
 }
 
-#review-list-box-h1{
+#review-list-box{
+    width: 100%;
+}
+
+#review-list-box-h1 {
     width: 100%;
     text-align: center;
     margin-top: 5%;
 }
 
-fieldset{
-    border: 2px solid rgb(55, 34, 19);
+fieldset {
+    border: 2px solid var(--BORDER_BROWN);
     border-radius: 20px;
     padding: 5% 10% 5% 5%;
 }
 
-#review-form input{
+#review-form input {
     margin-top: 3%;
     width: 100%;
     padding: 2%;
-    border: 1px solid rgb(55, 34, 19);
+    border: 1px solid var(--BORDER_BROWN);
     border-radius: 20px;
-    background-color: lightyellow;
+    background-color: var(--THEME_BACKGROUND);
 }
 
-#review-form textarea{
+#review-form textarea {
     max-width: 100%;
     margin-top: 3%;
     width: 100%;
     padding: 2%;
-    border: 1px solid rgb(55, 34, 19);
+    border: 1px solid var(--BORDER_BROWN);
     border-radius: 20px;
-    background-color: lightyellow;
+    background-color: var(--THEME_BACKGROUND);
 }
 
-#review-form select{
+#review-form select {
     margin-top: 3%;
     width: 105%;
     padding: 2%;
-    border: 1px solid rgb(55, 34, 19);
+    border: 1px solid var(--BORDER_BROWN);
     border-radius: 20px;
-    background-color: lightyellow;
+    background-color: var(--THEME_BACKGROUND);
 }
 
-#review-form button{
+#review-form button {
     width: 105%;
     margin-top: 3%;
     padding: 2%;
-    border: 2px solid rgb(55, 34, 19);
+    border: 2px solid var(--BORDER_BROWN);
     border-radius: 20px;
     margin-top: 2%;
-    font-size: 1.2em;
-    background-color: rgb(30,25,21);
-    color: rgb(248,255,255);
+    font-size: 1.5em;
+    background-color: var(--BUTTON);
+    color: var(--BUTTON_TEXT);
 }
 
-#review-form button:hover{
+#review-form button:hover {
     cursor: pointer;
-    background-color: rgb(30,25,21,0.9);
+    background-color: var(--BUTTON_HOVER);
 }
 
 /* review book style end */
 
 /* book list style start */
 
-#booklist-main{
+#booklist-main {
     padding: 2%;
 }
 
-#booklist-main h1{
+#booklist-main p {
+    font-size: 1.2em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#book-list-block{
+    margin-top: 5%;
+}
+
+#booklist-main h1 {
     width: 100%;
     text-align: center;
 }
 
-.book-list-detail{
+.book-list-detail {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
-.book{
+.book {
+    margin-top: 7%;
     font-weight: 550;
 }
 
@@ -336,27 +492,30 @@ fieldset{
 
 /* Genre book shelf style start */
 
-#genre-main{
+#genre-main {
     padding: 2%;
 }
 
-#magic-genre-box h1, #mystery-genre-box h1, #romace-genre-box h1, #scifi-genre-box h1{
+#magic-genre-box h1,
+#mystery-genre-box h1,
+#romace-genre-box h1,
+#scifi-genre-box h1 {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
     text-align: center;
 }
 
-#book-shelf{
+#book-shelf {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     padding: 1%;
 }
 
-#shelf{
+#shelf {
     border-bottom: 10px solid transparent;
-    border-image: linear-gradient(to right, rgb(27,18,17), rgb(97,47,42) );
+    border-image: linear-gradient(to right, rgb(27, 18, 17), rgb(97, 47, 42));
     border-image-slice: 1;
     padding: 0 5% 0 5%;
 }
@@ -404,47 +563,55 @@ fieldset{
     /* index style end */
 
     /* book detail style start */
-    #book-main{
+    #book-main {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
     }
 
-    #book-main-left{
+    #book-main-left {
         position: relative;
+        top: 0px;
         display: grid;
         justify-content: center;
         height: 300px;
     }
 
-    #book-main-left a{
+    #book-main-left a {
         width: 100%;
     }
+
     /* book detail style end */
 
     /* book list style start */
-    .book-list-detail{
+    .book-list-detail {
         width: 100%;
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+    #booklist-main p {
+        text-align: justify;
+    }
+
     /* book list style end */
 
     /* review book style start */
-    .review-user-detail{
+    .review-user-detail {
         width: 100%;
         grid-template-columns: 1fr;
         text-align: center;
     }
+
     /* review book style end */
 
     /* Genre book shelf style start */
 
-    #book-shelf{
+    #book-shelf {
         grid-template-columns: 1fr 1fr;
     }
 
-    #book-shelf img{
+    #book-shelf img {
         padding-top: 10%;
     }
 
