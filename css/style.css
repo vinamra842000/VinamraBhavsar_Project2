@@ -57,6 +57,12 @@
     font-size: 1.3em;
 }
 
+.sub-title-small{
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
 .rate-book{
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 1.3em;
@@ -85,6 +91,11 @@
     text-align: center;
 }
 
+.sub-title-small{
+    width: 100%;
+    text-align: center;
+}
+
 /* Common Class End  */
 
 /* Style Reset And Common Style*/
@@ -104,6 +115,7 @@ a {
 
 .bookimg {
     border-radius: 0 10px 10px 0;
+    cursor: pointer;
 }
 
 #outer_div {
@@ -369,6 +381,14 @@ dt {
     border-radius: 25px;
 }
 
+.color1{
+    color: red;
+}
+
+.color2{
+    color: blue;
+}
+
 /* about us style end */
 
 /* review book style start */
@@ -513,11 +533,12 @@ fieldset {
     padding: 1%;
 }
 
-#shelf {
+.shelf {
     border-bottom: 10px solid transparent;
     border-image: linear-gradient(to right, rgb(27, 18, 17), rgb(97, 47, 42));
     border-image-slice: 1;
     padding: 0 5% 0 5%;
+    text-align: center;
 }
 
 /* Genre book shelf style end */

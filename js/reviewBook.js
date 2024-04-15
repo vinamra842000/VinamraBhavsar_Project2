@@ -13,6 +13,11 @@ function clearData() {
 }
 
 function processData() {
+    $("#first_name").value = $("#first_name").value.trim();
+    $("#last_name").value = $("#last_name").value.trim();
+    $("#email").value = $("#email").value.trim();
+    $("#review").value = $("#review").value.trim();
+
     if ($("#first_name").value == undefined || $("#first_name").value == null || $("#first_name").value == '') {
         alert("First Name: Can not be blank.");
         return;
@@ -101,9 +106,7 @@ function addReviewToList(name, star, review, email) {
 
     var parenDiv = $("#review-list-box");
 
-    while (tempElement.firstChild) {
-        parenDiv.appendChild(tempElement.firstChild);
-    }
+    parenDiv.appendChild(tempElement);
 
     emailList.push(email)
 
