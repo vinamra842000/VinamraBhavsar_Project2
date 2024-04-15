@@ -113,6 +113,10 @@ a {
     font-size: 1.2em
 }
 
+ul{
+    padding: 0;
+}
+
 .bookimg {
     border-radius: 0 10px 10px 0;
     cursor: pointer;
