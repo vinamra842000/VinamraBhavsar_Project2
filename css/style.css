@@ -24,46 +24,47 @@
     font-family: "Kalam", cursive;
 }
 
-#nav_bar, #footer {
+#nav_bar,
+#footer {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
 
-#footer_div{
+#footer_div {
     font-family: "Dancing Script", sans-serif;
 }
 
-.title{
+.title {
     font-family: "Signika Negative", sans-serif;
     font-weight: 600;
     font-size: 3em;
 }
 
-.sub-title{
+.sub-title {
     font-family: "Signika Negative", sans-serif;
     font-weight: 600;
     font-size: 2em;
 }
 
-.sub-title-writer{
+.sub-title-writer {
     font-family: "Signika Negative", sans-serif;
     font-weight: 600;
     font-size: 1.7em;
 }
 
-.sub-title-book-list{
+.sub-title-book-list {
     font-family: "Signika Negative", sans-serif;
     font-weight: 600;
     font-size: 1.3em;
 }
 
-.sub-title-small{
+.sub-title-small {
     font-family: "Signika Negative", sans-serif;
     font-weight: 600;
     font-size: 0.9em;
 }
 
-.rate-book{
+.rate-book {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 1.3em;
     font-weight: bold;
@@ -85,13 +86,13 @@
     text-align: center;
 }
 
-.sub-title-writer{
+.sub-title-writer {
     width: 100%;
     margin: 15px 0;
     text-align: center;
 }
 
-.sub-title-small{
+.sub-title-small {
     width: 100%;
     text-align: center;
 }
@@ -113,7 +114,7 @@ a {
     font-size: 1.2em
 }
 
-ul{
+ul {
     padding: 0;
 }
 
@@ -288,7 +289,8 @@ section {
 
 #book-main p {
     font-size: 1.2em;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    ;
 }
 
 #book-main-left {
@@ -341,7 +343,8 @@ section {
     padding: 2%;
 }
 
-#about-main p, #about-main dl {
+#about-main p,
+#about-main dl {
     font-size: 1.2em;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
@@ -352,7 +355,7 @@ section {
     font-style: italic;
 }
 
-.about-us-subtitle{
+.about-us-subtitle {
     color: var(--ANCHOR_HOVER);
     margin-top: 35px;
 }
@@ -385,11 +388,11 @@ dt {
     border-radius: 25px;
 }
 
-.color1{
+.color1 {
     color: red;
 }
 
-.color2{
+.color2 {
     color: blue;
 }
 
@@ -404,8 +407,12 @@ dt {
     justify-items: center;
 }
 
-#review-main p, #review-main label, #review-main legend, #review-main input,
-#review-main textarea, #review-main select {
+#review-main p,
+#review-main label,
+#review-main legend,
+#review-main input,
+#review-main textarea,
+#review-main select {
     font-size: 1.3em;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
@@ -419,7 +426,7 @@ dt {
     text-align: center;
 }
 
-#review-list-box{
+#review-list-box {
     width: 100%;
 }
 
@@ -493,7 +500,7 @@ fieldset {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-#book-list-block{
+#book-list-block {
     margin-top: 5%;
 }
 
